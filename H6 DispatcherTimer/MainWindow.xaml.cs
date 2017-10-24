@@ -23,7 +23,6 @@ namespace H6_DispatcherTimer
     {
         private Random Randomnummer = new Random();
         private double x, y, size;
-        private SolidColorBrush brush;
         private DispatcherTimer timer = new DispatcherTimer();
 
         public MainWindow()
@@ -31,7 +30,6 @@ namespace H6_DispatcherTimer
             InitializeComponent();
 
             GapLabel.Content = Convert.ToString(GapSlider.Value);
-            brush = new SolidColorBrush(Colors.Aqua);
             timer.Interval = TimeSpan.FromMilliseconds(GapSlider.Value);
             timer.Tick += timer_Tick;
         }
@@ -54,6 +52,11 @@ namespace H6_DispatcherTimer
             x = Randomnummer.Next(0, Convert.ToInt32(MijnCanvas.Width));
             y = Randomnummer.Next(0, Convert.ToInt32(MijnCanvas.Height));
             size = Randomnummer.Next(1, 40);
+            Color randomColor = Color.FromRgb(
+                (byte)Randomnummer.Next(256),
+                (byte)Randomnummer.Next(256),
+                (byte)Randomnummer.Next(256));
+            SolidColorBrush brush = new SolidColorBrush(randomColor);
 
             Ellipse ellipse = new Ellipse();
             ellipse.Width = size;
