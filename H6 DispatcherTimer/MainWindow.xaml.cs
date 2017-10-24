@@ -31,7 +31,7 @@ namespace H6_DispatcherTimer
             InitializeComponent();
 
             GapLabel.Content = Convert.ToString(GapSlider.Value);
-            brush = new SolidColorBrush(Colors.Blue);
+            brush = new SolidColorBrush(Colors.Aqua);
             timer.Interval = TimeSpan.FromMilliseconds(GapSlider.Value);
             timer.Tick += timer_Tick;
         }

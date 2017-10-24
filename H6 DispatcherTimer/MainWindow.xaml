@@ -11,8 +11,9 @@
         <Button x:Name="StopKnop" Content="Stop" HorizontalAlignment="Left" Height="29" Margin="10,86,0,0" VerticalAlignment="Top" Width="110" Click="StopKnop_Click"/>
         <Button x:Name="ClearKnop" Content="Clear" HorizontalAlignment="Left" Height="29" Margin="10,148,0,0" VerticalAlignment="Top" Width="110" Click="ClearKnop_Click"/>
         <Slider x:Name="GapSlider" HorizontalAlignment="Left" Height="19" Margin="10,253,0,0" VerticalAlignment="Top" Width="110" ValueChanged="GapSlider_ValueChanged"/>
-        <Label x:Name="GapLabel" Content="Label" HorizontalAlignment="Left" Height="32" Margin="10,277,0,0" VerticalAlignment="Top" Width="92"/>
+        <Label x:Name="GapLabel" Content="Label" HorizontalAlignment="Left" Height="32" Margin="10,277,0,0" VerticalAlignment="Top" Width="50"/>
         <Canvas x:Name="MijnCanvas" HorizontalAlignment="Left" Height="283" Margin="160,26,0,0" VerticalAlignment="Top" Width="347" Background="#FFC3BEBE"/>
+        <Label Content="ms gap" HorizontalAlignment="Left" Height="32" Margin="65,277,0,0" VerticalAlignment="Top" Width="55"/>
 
     </Grid>
 </Window>
